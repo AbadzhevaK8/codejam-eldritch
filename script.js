@@ -1,4 +1,8 @@
 // ---------------------------- Data and variables.
+let diffDeckGreen = [];
+let diffDeckBrown = [];
+let diffDeckBlue = [];
+
 
 let tempDeck = [];
 let resultDeck = [];
@@ -491,7 +495,7 @@ const selectClickedAncient = (clickedA) => {
 }
 // Show diffs
 const showDiffs = () => {
-  difficultiesBtns.forEach(function(item) {
+  difficultiesBtns.forEach(function (item) {
     item.classList.remove('hidden');
   });
 }
@@ -532,10 +536,75 @@ const selectClickedDifficult = (clickedD) => {
   clickedD.classList.add('active');
 }
 
-// ------------------------------- Deck generation.
+// --------------------------------------------------------------------------- Deck generation.
 
 const makeDeckBtn = document.querySelector('.makeDeck');
 
 makeDeckBtn.addEventListener('click', () => {
   document.querySelector('.deck-container').classList.remove('hidden');
+
+  // Clean diffDecks.
+
+  diffDeckGreen = [];
+  diffDeckBrown = [];
+  diffDeckBlue = [];
+
+  // Get numbers of colored cards.
+
+  function getCountCardsOfAncient (currentAncient, colorOfCards) {
+    return ancientsData[currentAncient].firstStage[colorOfCards] + ancientsData[currentAncient].secondStage[colorOfCards] + ancientsData[currentAncient].thirdStage[colorOfCards];
+  }
+
+  let greenCardsCount = getCountCardsOfAncient(currentAncient, "greenCards");
+  let brownCardsCount = getCountCardsOfAncient(currentAncient, "brownCards");
+  let blueCardsCount = getCountCardsOfAncient(currentAncient, "blueCards");
+
+  console.log(greenCardsCount);
+  console.log(brownCardsCount);
+  console.log(blueCardsCount);
+  console.log(currentDifficult);
+
+  // Functions for different mods.
+  function getVeryEasyDeck (cardsDataColor, diffDeckColor, colorCardCount){
+    for (let i = 0; i < cardsDataColor.length; i++) {
+      if (cardsDataColor[i].difficulty === 'easy' && diffDeckColor.length < colorCardCount) {
+        diffDeckColor.push(cardsDataColor[i]);
+      }
+    }
+
+    while (diffDeckColor.length < colorCardCount) {
+      let item = cardsDataColor[Math.floor(Math.random()*cardsDataColor.length)];
+        if (item.difficulty === 'normal' && !diffDeckColor.includes(item)) {
+            if (diffDeckColor.length < colorCardCount) {
+              diffDeckColor.push(item);
+          }
+        }
+    }
+    console.log(diffDeckColor);
+  }
+
+  function getEasyDeck (cardsDataColor, diffDeckColor, colorCardCount) {
+    while (diffDeckColor.length < colorCardCount) {
+      let itemEasy = cardsDataColor[Math.floor(Math.random()*cardsDataColor.length)];
+        if (itemEasy.difficulty !== 'hard' && !diffDeckColor.includes(itemEasy)) {
+            if (diffDeckColor.length < colorCardCount) {
+              diffDeckColor.push(itemEasy);
+          }
+        }
+    }
+    console.log(diffDeckColor);
+  }
+
+  if (currentDifficult === "veryEasy") {     // VeryEasy mode deck.
+    getVeryEasyDeck(cardsDataGreen, diffDeckGreen, greenCardsCount);
+    getVeryEasyDeck(cardsDataBrown, diffDeckBrown, brownCardsCount);
+    getVeryEasyDeck(cardsDataBlue, diffDeckBlue, blueCardsCount);
+  } else if (currentDifficult === "easy"){   // Easy mode deck.
+    getEasyDeck(cardsDataGreen, diffDeckGreen, greenCardsCount);
+    getEasyDeck(cardsDataBrown, diffDeckBrown, brownCardsCount);
+    getEasyDeck(cardsDataBlue, diffDeckBlue, blueCardsCount);
+  }
 })
+
+
+
