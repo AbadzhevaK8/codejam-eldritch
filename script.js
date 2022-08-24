@@ -11,6 +11,7 @@ let resultDeck = [];
 let currentAncient = 0;
 let currentDifficult = '';
 
+
 const difficulties = [
   {
     id: 'veryEasy',
@@ -38,7 +39,7 @@ const ancientsData = [
   {
     id: 'azathoth',
     name: 'azathoth',
-    cardFace: "./assets/Ancients/Azathoth.png",
+    cardFace: "./assets/Ancients/Azathoth.jpg",
     firstStage: {
       greenCards: 1,
       blueCards: 1,
@@ -58,7 +59,7 @@ const ancientsData = [
   {
     id: 'cthulhu',
     name: 'cthulhu',
-    cardFace: "./assets/Ancients/Cthulthu.png",
+    cardFace: "./assets/Ancients/Cthulthu.jpg",
     firstStage: {
       greenCards: 0,
       blueCards: 2,
@@ -78,7 +79,7 @@ const ancientsData = [
   {
     id: 'iogSothoth',
     name: 'iogSothoth',
-    cardFace: "./assets/Ancients/IogSothoth.png",
+    cardFace: "./assets/Ancients/IogSothoth.jpg",
     firstStage: {
       greenCards: 0,
       blueCards: 1,
@@ -98,7 +99,7 @@ const ancientsData = [
   {
     id: 'shubNiggurath',
     name: 'shubNiggurath',
-    cardFace: "./assets/Ancients/ShubNiggurath.png",
+    cardFace: "./assets/Ancients/ShubNiggurath.jpg",
     firstStage: {
       greenCards: 1,
       blueCards: 1,
@@ -120,73 +121,73 @@ const ancientsData = [
 const cardsDataBlue = [
   {
     id: 'blue1',
-    cardFace: "./assets/MythicCards/blue/blue1.png",
+    cardFace: "./assets/MythicCards/blue/blue1.jpg",
     difficulty: 'hard',
     color: 'blue'
   },
   {
     id: 'blue2',
-    cardFace: "./assets/MythicCards/blue/blue2.png",
+    cardFace: "./assets/MythicCards/blue/blue2.jpg",
     difficulty: 'hard',
     color: 'blue'
   },
   {
     id: 'blue3',
-    cardFace: "./assets/MythicCards/blue/blue3.png",
+    cardFace: "./assets/MythicCards/blue/blue3.jpg",
     difficulty: 'easy',
     color: 'blue'
   },
   {
     id: 'blue4',
-    cardFace: "./assets/MythicCards/blue/blue4.png",
+    cardFace: "./assets/MythicCards/blue/blue4.jpg",
     difficulty: 'easy',
     color: 'blue'
   },
   {
     id: 'blue5',
-    cardFace: "./assets/MythicCards/blue/blue5.png",
+    cardFace: "./assets/MythicCards/blue/blue5.jpg",
     difficulty: 'easy',
     color: 'blue'
   },
   {
     id: 'blue6',
-    cardFace: "./assets/MythicCards/blue/blue6.png",
+    cardFace: "./assets/MythicCards/blue/blue6.jpg",
     difficulty: 'hard',
     color: 'blue'
   },
   {
     id: 'blue7',
-    cardFace: "./assets/MythicCards/blue/blue7.png",
+    cardFace: "./assets/MythicCards/blue/blue7.jpg",
     difficulty: 'normal',
     color: 'blue'
   },
   {
     id: 'blue8',
-    cardFace: "./assets/MythicCards/blue/blue8.png",
+    cardFace: "./assets/MythicCards/blue/blue8.jpg",
     difficulty: 'hard',
     color: 'blue'
   },
   {
     id: 'blue9',
-    cardFace: "./assets/MythicCards/blue/blue9.png",
+    cardFace: "./assets/MythicCards/blue/blue9.jpg",
     difficulty: 'normal',
     color: 'blue'
   },
   {
     id: 'blue10',
-    cardFace: "./assets/MythicCards/blue/blue10.png",
+    cardFace: "./assets/MythicCards/blue/blue10.jpg",
     difficulty: 'easy',
     color: 'blue'
   },
   {
     id: 'blue11',
-    cardFace: "./assets/MythicCards/blue/blue11.png",
+    cardFace: "./assets/MythicCards/blue/blue11.jpg",
     difficulty: 'normal',
     color: 'blue'
   },
   {
     id: 'blue12',
-    cardFace: "./assets/MythicCards/blue/blue12.png",
+    cardFace: "./assets/MythicCards/blue/blue12.jpg",
     difficulty: 'normal',
     color: 'blue'
   },
@@ -195,127 +196,127 @@ const cardsDataBlue = [
 const cardsDataBrown = [
   {
     id: 'brown1',
-    cardFace: "./assets/MythicCards/brown/brown1.png",
+    cardFace: "./assets/MythicCards/brown/brown1.jpg",
     difficulty: 'normal',
     color: 'brown'
   },
   {
     id: 'brown2',
-    cardFace: "./assets/MythicCards/brown/brown2.png",
+    cardFace: "./assets/MythicCards/brown/brown2.jpg",
     difficulty: 'normal',
     color: 'brown'
   },
   {
     id: 'brown3',
-    cardFace: "./assets/MythicCards/brown/brown3.png",
+    cardFace: "./assets/MythicCards/brown/brown3.jpg",
     difficulty: 'normal',
     color: 'brown'
   },
   {
     id: 'brown4',
-    cardFace: "./assets/MythicCards/brown/brown4.png",
+    cardFace: "./assets/MythicCards/brown/brown4.jpg",
     difficulty: 'normal',
     color: 'brown'
   },
   {
     id: 'brown5',
-    cardFace: "./assets/MythicCards/brown/brown5.png",
+    cardFace: "./assets/MythicCards/brown/brown5.jpg",
     difficulty: 'normal',
     color: 'brown'
   },
   {
     id: 'brown6',
-    cardFace: "./assets/MythicCards/brown/brown6.png",
+    cardFace: "./assets/MythicCards/brown/brown6.jpg",
     difficulty: 'hard',
     color: 'brown'
   },
   {
     id: 'brown7',
-    cardFace: "./assets/MythicCards/brown/brown7.png",
+    cardFace: "./assets/MythicCards/brown/brown7.jpg",
     difficulty: 'hard',
     color: 'brown'
   },
   {
     id: 'brown8',
-    cardFace: "./assets/MythicCards/brown/brown8.png",
+    cardFace: "./assets/MythicCards/brown/brown8.jpg",
     difficulty: 'hard',
     color: 'brown'
   },
   {
     id: 'brown9',
-    cardFace: "./assets/MythicCards/brown/brown9.png",
+    cardFace: "./assets/MythicCards/brown/brown9.jpg",
     difficulty: 'hard',
     color: 'brown'
   },
   {
     id: 'brown10',
-    cardFace: "./assets/MythicCards/brown/brown10.png",
+    cardFace: "./assets/MythicCards/brown/brown10.jpg",
     difficulty: 'hard',
     color: 'brown'
   },
   {
     id: 'brown11',
-    cardFace: "./assets/MythicCards/brown/brown11.png",
+    cardFace: "./assets/MythicCards/brown/brown11.jpg",
     difficulty: 'easy',
     color: 'brown'
   },
   {
     id: 'brown12',
-    cardFace: "./assets/MythicCards/brown/brown12.png",
+    cardFace: "./assets/MythicCards/brown/brown12.jpg",
     difficulty: 'easy',
     color: 'brown'
   },
   {
     id: 'brown13',
-    cardFace: "./assets/MythicCards/brown/brown13.png",
+    cardFace: "./assets/MythicCards/brown/brown13.jpg",
     difficulty: 'easy',
     color: 'brown'
   },
   {
     id: 'brown14',
-    cardFace: "./assets/MythicCards/brown/brown14.png",
+    cardFace: "./assets/MythicCards/brown/brown14.jpg",
     difficulty: 'easy',
     color: 'brown'
   },
   {
     id: 'brown15',
-    cardFace: "./assets/MythicCards/brown/brown15.png",
+    cardFace: "./assets/MythicCards/brown/brown15.jpg",
     difficulty: 'normal',
     color: 'brown'
   },
   {
     id: 'brown16',
-    cardFace: "./assets/MythicCards/brown/brown16.png",
+    cardFace: "./assets/MythicCards/brown/brown16.jpg",
     difficulty: 'normal',
     color: 'brown'
   },
   {
     id: 'brown17',
-    cardFace: "./assets/MythicCards/brown/brown17.png",
+    cardFace: "./assets/MythicCards/brown/brown17.jpg",
     difficulty: 'normal',
     color: 'brown'
   },
   {
     id: 'brown18',
-    cardFace: "./assets/MythicCards/brown/brown18.png",
+    cardFace: "./assets/MythicCards/brown/brown18.jpg",
     difficulty: 'normal',
     color: 'brown'
   },
   {
     id: 'brown19',
-    cardFace: "./assets/MythicCards/brown/brown19.png",
+    cardFace: "./assets/MythicCards/brown/brown19.jpg",
     difficulty: 'normal',
     color: 'brown'
   },
   {
     id: 'brown20',
-    cardFace: "./assets/MythicCards/brown/brown20.png",
+    cardFace: "./assets/MythicCards/brown/brown20.jpg",
     difficulty: 'normal',
     color: 'brown'
   },
   {
     id: 'brown21',
-    cardFace: "./assets/MythicCards/brown/brown21.png",
+    cardFace: "./assets/MythicCards/brown/brown21.jpg",
     difficulty: 'easy',
     color: 'brown'
   },
@@ -324,149 +325,114 @@ const cardsDataBrown = [
 const cardsDataGreen = [
   {
     id: 'green1',
-    cardFace: "./assets/MythicCards/green/green1.png",
+    cardFace: "./assets/MythicCards/green/green1.jpg",
     difficulty: 'easy',
     color: 'green'
   },
   {
     id: 'green2',
-    cardFace: "./assets/MythicCards/green/green2.png",
+    cardFace: "./assets/MythicCards/green/green2.jpg",
     difficulty: 'hard',
     color: 'green'
   },
   {
     id: 'green3',
-    cardFace: "./assets/MythicCards/green/green3.png",
+    cardFace: "./assets/MythicCards/green/green3.jpg",
     difficulty: 'hard',
     color: 'green'
   },
   {
     id: 'green4',
-    cardFace: "./assets/MythicCards/green/green4.png",
+    cardFace: "./assets/MythicCards/green/green4.jpg",
     difficulty: 'hard',
     color: 'green'
   },
   {
     id: 'green5',
-    cardFace: "./assets/MythicCards/green/green5.png",
+    cardFace: "./assets/MythicCards/green/green5.jpg",
     difficulty: 'hard',
     color: 'green'
   },
   {
     id: 'green6',
-    cardFace: "./assets/MythicCards/green/green6.png",
+    cardFace: "./assets/MythicCards/green/green6.jpg",
     difficulty: 'hard',
     color: 'green'
   },
   {
     id: 'green7',
-    cardFace: "./assets/MythicCards/green/green7.png",
+    cardFace: "./assets/MythicCards/green/green7.jpg",
     difficulty: 'normal',
     color: 'green'
   },
   {
     id: 'green8',
-    cardFace: "./assets/MythicCards/green/green8.png",
+    cardFace: "./assets/MythicCards/green/green8.jpg",
     difficulty: 'normal',
     color: 'green'
   },
   {
     id: 'green9',
-    cardFace: "./assets/MythicCards/green/green9.png",
+    cardFace: "./assets/MythicCards/green/green9.jpg",
     difficulty: 'normal',
     color: 'green'
   },
   {
     id: 'green10',
-    cardFace: "./assets/MythicCards/green/green10.png",
+    cardFace: "./assets/MythicCards/green/green10.jpg",
     difficulty: 'normal',
     color: 'green'
   },
   {
     id: 'green11',
-    cardFace: "./assets/MythicCards/green/green11.png",
+    cardFace: "./assets/MythicCards/green/green11.jpg",
     difficulty: 'normal',
     color: 'green'
   },
   {
     id: 'green12',
-    cardFace: "./assets/MythicCards/green/green12.png",
+    cardFace: "./assets/MythicCards/green/green12.jpg",
     difficulty: 'easy',
     color: 'green'
   },
   {
     id: 'green13',
-    cardFace: "./assets/MythicCards/green/green13.png",
+    cardFace: "./assets/MythicCards/green/green13.jpg",
     difficulty: 'normal',
     color: 'green'
   },
   {
     id: 'green14',
-    cardFace: "./assets/MythicCards/green/green14.png",
+    cardFace: "./assets/MythicCards/green/green14.jpg",
     difficulty: 'normal',
     color: 'green'
   },
   {
     id: 'green15',
-    cardFace: "./assets/MythicCards/green/green15.png",
+    cardFace: "./assets/MythicCards/green/green15.jpg",
     difficulty: 'normal',
     color: 'green'
   },
   {
     id: 'green16',
-    cardFace: "./assets/MythicCards/green/green16.png",
+    cardFace: "./assets/MythicCards/green/green16.jpg",
     difficulty: 'easy',
     color: 'green'
   },
   {
     id: 'green17',
-    cardFace: "./assets/MythicCards/green/green17.png",
+    cardFace: "./assets/MythicCards/green/green17.jpg",
     difficulty: 'easy',
     color: 'green'
   },
   {
     id: 'green18',
-    cardFace: "./assets/MythicCards/green/green18.png",
+    cardFace: "./assets/MythicCards/green/green18.jpg",
     difficulty: 'easy',
     color: 'green'
   },
 ]
 
-// --------------------------------------------- Show a card logic.
-
-const imageCard = document.querySelector('.last-card');
-const cardBackground = document.querySelector('.deck');
-let cardCounter = 0;
-
-function showCard(resultDeck) {
-  document.querySelector('.last-card').classList.remove('hidden');
-  let deckLength = resultDeck.length;
-  console.log(deckLength);
-  console.log(cardCounter);
-  
-  if (cardCounter < deckLength) {
-    const cardName = resultDeck[cardCounter].id;
-    const cardColor = resultDeck[cardCounter].color;
-    console.log(cardName);
-    const img = new Image();
-  
-    img.src = `./assets/MythicCards/${cardColor}/${cardName}.jpg`;
-    img.onload = () => {
-      imageCard.style.backgroundImage = `url(${img.src})`;
-    };
-    cardCounter++;
-    if (cardCounter === deckLength) {
-      document.querySelector('.deck').classList.add('hidden');
-    }
-  } 
-
-
-
-}
-
-cardBackground.addEventListener('click', () => {
-  showCard(resultDeck);
-})
 
 // ---------------------------------------------- Select an ancient logic.
 const difficultiesBtns = document.querySelectorAll('.difficulty');
@@ -561,7 +527,8 @@ makeDeckBtn.addEventListener('click', () => {
   document.querySelector('.deck-container').classList.remove('hidden');
   document.querySelector('.deck').classList.remove('hidden');
   document.querySelector('.last-card').classList.add('hidden');
-
+  let startGameCounter = ancientsData[currentAncient];
+  showGameCounter(startGameCounter);
 
   // Clean diffDecks.
 
@@ -586,10 +553,6 @@ makeDeckBtn.addEventListener('click', () => {
   let brownCardsCount = getCountCardsOfAncient(currentAncient, "brownCards");
   let blueCardsCount = getCountCardsOfAncient(currentAncient, "blueCards");
 
-  // console.log(greenCardsCount);
-  // console.log(brownCardsCount);
-  // console.log(blueCardsCount);
-  // console.log(currentDifficult);
 
   // Functions for different mods.
   function getVeryEasyDeck(cardsDataColor, diffDeckColor, colorCardCount) {
@@ -606,7 +569,7 @@ makeDeckBtn.addEventListener('click', () => {
         }
       }
     }
-    // console.log(diffDeckColor);
+
   }
 
   function getEasyDeck(cardsDataColor, diffDeckColor, colorCardCount) {
@@ -618,7 +581,6 @@ makeDeckBtn.addEventListener('click', () => {
         }
       }
     }
-    // console.log(diffDeckColor);
   }
 
   function getNormalDeck(cardsDataColor, diffDeckColor, colorCardCount) {
@@ -630,7 +592,6 @@ makeDeckBtn.addEventListener('click', () => {
         }
       }
     }
-    // console.log(diffDeckColor);
   }
 
   function getHardDeck(cardsDataColor, diffDeckColor, colorCardCount) {
@@ -642,7 +603,6 @@ makeDeckBtn.addEventListener('click', () => {
         }
       }
     }
-    // console.log(diffDeckColor);
   }
 
   function getVeryHardDeck(cardsDataColor, diffDeckColor, colorCardCount) {
@@ -685,34 +645,26 @@ makeDeckBtn.addEventListener('click', () => {
   }
 
   function getStageDeck(currentAncient, stageNum, diffDeckGreen, diffDeckBrown, diffDeckBlue, stageDeck) {
-    // console.log("-------------------start----------------------");
-    // console.log(diffDeckGreen);
     let greenCardsStageNum = ancientsData[currentAncient][stageNum].greenCards;
-    // console.log(greenCardsStageNum);
     let brownCardsStageNum = ancientsData[currentAncient][stageNum].brownCards;
     let blueCardsStageNum = ancientsData[currentAncient][stageNum].blueCards;
+
     for (let i = greenCardsStageNum; i > 0; i--) {
-      let itemG = diffDeckGreen[Math.floor(Math.random()*diffDeckGreen.length)];
-      // console.log(itemG);
-      // console.log(diffDeckGreen.indexOf(itemG));
+      let itemG = diffDeckGreen[Math.floor(Math.random() * diffDeckGreen.length)];
       let itemGIdx = diffDeckGreen.indexOf(itemG);
-      diffDeckGreen.splice(itemGIdx, 1); 
+      diffDeckGreen.splice(itemGIdx, 1);
       stageDeck.push(itemG);
     }
     for (let i = brownCardsStageNum; i > 0; i--) {
-      let itemBn = diffDeckBrown[Math.floor(Math.random()*diffDeckBrown.length)];
-      // console.log(itemBn);
-      // console.log(diffDeckBrown.indexOf(itemBn));
+      let itemBn = diffDeckBrown[Math.floor(Math.random() * diffDeckBrown.length)];
       let itemBnIdx = diffDeckBrown.indexOf(itemBn);
-      diffDeckBrown.splice(itemBnIdx, 1); 
+      diffDeckBrown.splice(itemBnIdx, 1);
       stageDeck.push(itemBn);
     }
     for (let i = blueCardsStageNum; i > 0; i--) {
-      let itemBl = diffDeckBlue[Math.floor(Math.random()*diffDeckBlue.length)];
-      // console.log(itemBl);
-      // console.log(diffDeckBlue.indexOf(itemBl));
+      let itemBl = diffDeckBlue[Math.floor(Math.random() * diffDeckBlue.length)];
       let itemBlIdx = diffDeckBlue.indexOf(itemBl);
-      diffDeckBlue.splice(itemBlIdx, 1); 
+      diffDeckBlue.splice(itemBlIdx, 1);
       stageDeck.push(itemBl);
     }
 
@@ -730,31 +682,90 @@ makeDeckBtn.addEventListener('click', () => {
   shuffle(secondStageDeck);
   shuffle(thirdStageDeck);
 
-  // console.log(firstStageDeck);
-  // console.log(secondStageDeck);
-  // console.log(thirdStageDeck);
-
   resultDeck = firstStageDeck.concat(secondStageDeck.concat(thirdStageDeck));
-
-  console.log(resultDeck);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  document.querySelector('.thirdStageTxt').classList.remove('active');
 
 })
 
 
+function showGameCounter(gameCounter) {
+  document.querySelector('.st1green').innerHTML = gameCounter.firstStage.greenCards;
+  document.querySelector('.st1brown').innerHTML = gameCounter.firstStage.brownCards;
+  document.querySelector('.st1blue').innerHTML = gameCounter.firstStage.blueCards;
+  document.querySelector('.st2green').innerHTML = gameCounter.secondStage.greenCards;
+  document.querySelector('.st2brown').innerHTML = gameCounter.secondStage.brownCards;
+  document.querySelector('.st2blue').innerHTML = gameCounter.secondStage.blueCards;
+  document.querySelector('.st3green').innerHTML = gameCounter.thirdStage.greenCards;
+  document.querySelector('.st3brown').innerHTML = gameCounter.thirdStage.brownCards;
+  document.querySelector('.st3blue').innerHTML = gameCounter.thirdStage.blueCards;
+}
+
+// ------------------------------------------------------------------------------------------- Show card logic.
+
+const imageCard = document.querySelector('.last-card');
+const cardBackground = document.querySelector('.deck');
+let cardCounter = 0;
+
+function showCard(resultDeck, gC) {
+  const firstStageLength = gC.firstStage.greenCards + gC.firstStage.brownCards + gC.firstStage.blueCards;
+  const secondStageLength = gC.secondStage.greenCards + gC.secondStage.brownCards + gC.secondStage.blueCards;
+
+  document.querySelector('.last-card').classList.remove('hidden');
+  let deckLength = resultDeck.length;
+  
+  const cardName = resultDeck[cardCounter].id;
+  const cardColor = resultDeck[cardCounter].color;
+
+  if (cardCounter < deckLength) {
+    const img = new Image();
+    img.src = `./assets/MythicCards/${cardColor}/${cardName}.jpg`;
+
+    img.onload = () => {
+      imageCard.style.backgroundImage = `url(${img.src})`;
+    };
+
+    cardCounter++;
+
+    if (cardCounter === deckLength) {
+      document.querySelector('.deck').classList.add('hidden');
+    }
+  }
+  
+  // ------------------ counter logic.
+  if (firstStageLength) {
+    document.querySelector('.firstStageTxt').classList.add('active');
+    if (cardColor == 'green') {
+      gC.firstStage.greenCards = gC.firstStage.greenCards - 1;
+    } else if (cardColor == 'brown') {
+      gC.firstStage.brownCards = gC.firstStage.brownCards - 1;
+    } else {
+      gC.firstStage.blueCards = gC.firstStage.blueCards - 1;
+    }
+  } else if (secondStageLength){
+    document.querySelector('.firstStageTxt').classList.remove('active');
+    document.querySelector('.secondStageTxt').classList.add('active');
+    if (cardColor == 'green') {
+      gC.secondStage.greenCards = gC.secondStage.greenCards - 1;
+    } else if (cardColor == 'brown') {
+      gC.secondStage.brownCards = gC.secondStage.brownCards - 1;
+    } else {
+      gC.secondStage.blueCards = gC.secondStage.blueCards - 1;
+    }
+  } else {
+    document.querySelector('.secondStageTxt').classList.remove('active');
+    document.querySelector('.thirdStageTxt').classList.add('active');
+    if (cardColor == 'green') {
+      gC.thirdStage.greenCards = gC.thirdStage.greenCards - 1;
+    } else if (cardColor == 'brown') {
+      gC.thirdStage.brownCards = gC.thirdStage.brownCards - 1;
+    } else {
+      gC.thirdStage.blueCards = gC.thirdStage.blueCards - 1;
+    }
+  } 
+  showGameCounter(ancientsData[currentAncient]);
+}
+
+cardBackground.addEventListener('click', () => {
+  showCard(resultDeck, ancientsData[currentAncient]);
+})
 
