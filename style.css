@@ -3,16 +3,16 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-.App {
+.app {
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   height: 100vh;
   justify-content: space-evenly;
   width: 100vw;
+  transition: all 0.3s;
 }
 
 .ancients-container {
@@ -24,21 +24,21 @@ body {
   min-width: 40%;
   padding: 20px;
 }
-
-.ancients-container .ancient-card {
+.ancient-card {
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: contain;
   box-sizing: border-box;
   cursor: pointer;
-  height: 260px;
-  width: 200px;
+  height: 420px;
+  width: 325px;
+  border-radius: 10px;
+  transition: ease-out 0.5s;
 }
 
-.ancients-container .ancient-card.active {
-  border: 2px solid rgb(159, 6, 197);
+.ancient-card:active, .ancient-card:focus, .ancient-card:hover {
+  box-shadow: 0px 0px 20px 5px white;
 }
-
 
 .difficulty-container {
   display: flex;
@@ -47,19 +47,39 @@ body {
   height: 50px;
   justify-content: center;
   align-items: flex-start;
+  transition: all 0.3s;
 }
 
 
-.difficulty-container .difficulty {
-  border: 2px solid rgb(212, 209, 212);
+.difficulty {
+  /* border: 2px solid white; */
   box-sizing: border-box;
-  color: rgb(235, 224, 235);
+  color: white;
   cursor: pointer;
-  padding: 5px;
+  padding: 10px;
+  border-radius: 10px;
   text-align: center;
+  transition: ease-in-out 0.5s;
 }
 
+.difficulty:focus, .difficulty:hover, .difficulty:active {
+  box-shadow: 0px 0px 20px 5px white;
+}
 
+.difficulty-container.difficulty.active {
+  border: 2px solid white;
+  transition: all 0.3s;
+}
+
+.active {
+  box-shadow: 0px 0px 20px 5px white;
+  transition: all 0.3s;
+}
+
+.hidden {
+  visibility: hidden;
+  transition: all 0.3s;
+}
 
 .deck-container {
   align-items: center;
@@ -68,14 +88,26 @@ body {
   gap: 40px;
   justify-content: center;
   min-width: 30%;
-  padding-bottom: 10vh;
+  transition: all 0.3s;
 }
 
 
 .deck-container .deck, .deck-container .last-card {
   background-size: cover;
-  height: 190px;
-  width: 130px;
+  height: 330px;
+  width: 225px;
+  transition: all 0.3s;
+}
+
+.deck {
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.last-card {
+  border-radius: 10px;
+  transition: all 0.3s;
 }
 
 .deck-container .current-state {
@@ -83,6 +115,7 @@ body {
   flex-direction: column;
   gap: 10px;
   min-height: 30%;
+  transition: all 0.3s;
 }
 
 .deck-container .current-state .stage-container {
@@ -90,45 +123,65 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  transition: all 0.3s;
 }
 
 
 .deck-container .current-state .stage-container .stage-text {
-  color: rgb(241, 238, 241);
+  color: white;;
+  transition: all 0.3s;
 }
 
+.stage-text {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
 
 .deck-container .current-state .stage-container .dots-container {
   align-items: center;
   display: flex;
-  gap: 20px;
+  gap: 40px;
   justify-content: center;
+  opacity: 0.7;
+  transition: all 0.3s;
 }
 
 .deck-container .current-state .stage-container .dot.green {
-  background-color: rgb(61, 194, 132);
+  background-color: rgb(2, 75, 30);
 }
 .deck-container .current-state .stage-container .dot.brown {
-  background-color: rgb(185, 103, 65);
+  background-color: rgb(119, 40, 3);
 }
 .deck-container .current-state .stage-container .dot.blue {
-  background-color: rgb(9, 197, 211);
+  background-color: rgb(66, 3, 117);
 }
 .deck-container .current-state .stage-container .dot {
   color: white;
   align-items: center;
   border-radius: 50%;
   display: flex;
-  height: 30px;
+  height: 40px;
   justify-content: center;
-  width: 30px;
+  width: 40px;
+  transition: all 0.3s;
 }
 
 .makeDeck {
-  color: rgb(159, 6, 197);
-  border: 2px solid rgb(159, 6, 197);
+  color: white;
+  border: 2px solid white;
   box-sizing: border-box;
   cursor: pointer;
-  padding: 5px;
+  padding: 10px;
+  border-radius: 10px;
   text-align: center;
+  transition: ease-in-out 0.5s;
+
+}
+
+.makeDeck:hover, .makeDeck:active, .makeDeck:focus {
+  border: 2px solid transparent;
+  box-shadow: 0px 0px 20px 5px white;
+  transition: all 0.3s;
 }
